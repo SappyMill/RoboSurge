@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\ArrowTrap.cs" />
     <Compile Include="Assets\Scripts\BatteryPowered.cs" />
     <Compile Include="Assets\Scripts\BatteryScript.cs" />
+    <Compile Include="Assets\Scripts\Canvas.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\Elevator.cs" />
     <Compile Include="Assets\Scripts\Manager.cs" />

@@ -13,6 +13,7 @@ public class PlayerController : BatteryPowered
     private bool carryingBattery, dead, respawned;
     private GameObject interacableObject;
     public GameObject manager;
+    public GameObject canvas;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class PlayerController : BatteryPowered
         startingPos = transform.position;
         manager = GameObject.FindGameObjectWithTag("GameController");
         manager.GetComponent<Manager>().AddPlayer(this.gameObject);
+        canvas = GameObject.FindGameObjectWithTag("Canvas");
     }
 
     // Update is called once per frame
@@ -150,6 +152,10 @@ public class PlayerController : BatteryPowered
         {
             dead = true;
             manager.GetComponent<Manager>().PlayerDied(battery);
+        }
+        if(other.tag == "Respawn")
+        {
+            canvas.SetActive(true);
         }
     }
 
